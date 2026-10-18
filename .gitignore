@@ -15,7 +15,6 @@ config.local.json
 *.key
 .env
 .env.*
-_canvas/config.json
 _canvas/data/
 _canvas/boards/
 _canvas/thumbs/

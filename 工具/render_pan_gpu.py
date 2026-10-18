@@ -1,15 +1,15 @@
 """Blender GPU 运镜渲染助手（EEVEE + GPU，输出到画布目录之外）
 
 用法（无头）:
-  blender -b --python render_pan_gpu.py -- --out E:\伊雪的活\_blender_out\job1
+  blender -b --python render_pan_gpu.py -- --out <渲染临时目录>/job1
 
 配置在 JOBS 里：图片、帧数、运镜像素。渲染完由调用方（ffmpeg 合成后）删除 --out 目录。
 """
 import bpy, math, os, sys, json, time
 
-ROOT = r'E:\伊雪的活\ptest\ptest\人物替换_NIGHTDANCER'
-V7 = os.path.join(ROOT, '关键帧_替换_v7')
-OUT_DEFAULT = r'E:\伊雪的活\_blender_out\job'
+PROJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+V7 = os.path.join(PROJ, '关键帧_替换_v7')
+OUT_DEFAULT = os.environ.get('RENDER_OUT', os.path.join(__import__('tempfile').gettempdir(), '_blender_out', 'job'))
 JOBS = [
     ('K01', 'K01_v7.png', 240, -380),
     ('K06', 'K06_v7.png', 225, 186),

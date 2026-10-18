@@ -1,10 +1,9 @@
 """同步画布选择 → 关键帧_替换_v7，并报告哪些镜头渲染图与选择不一致"""
 import json, os, shutil, hashlib, urllib.request
 
-ROOT = r'E:\伊雪的活\ptest\ptest'
-PROJ = '人物替换_NIGHTDANCER'
-V7 = os.path.join(ROOT, PROJ, '关键帧_替换_v7')
-MOTION_DIR = r'E:\伊雪的活\_blender_out\job_motion'
+PROJ_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # 工具/ 的上一级
+V7 = os.path.join(PROJ_DIR, '关键帧_替换_v7')
+CANVAS_URL = os.environ.get('CANVAS_URL', 'http://127.0.0.1:17800')
 
 def md5(p):
     h = hashlib.md5()
@@ -13,7 +12,7 @@ def md5(p):
             h.update(chunk)
     return h.hexdigest()
 
-board = json.load(urllib.request.urlopen('http://127.0.0.1:17800/api/board'))
+board = json.load(urllib.request.urlopen(CANVAS_URL + '/api/board'))
 sel = {}
 for c in board.get('cards', []):
     k = c.get('key') or ''
@@ -22,7 +21,7 @@ for c in board.get('cards', []):
 
 changed, same = [], []
 for shot, rel in sorted(sel.items()):
-    src = os.path.join(ROOT, rel)
+    src = os.path.join(PROJ_DIR, rel)
     if not os.path.exists(src):
         print(shot, 'MISSING', rel); continue
     dst = os.path.join(V7, shot + '_v7.png')
@@ -34,5 +33,5 @@ for shot, rel in sorted(sel.items()):
 
 print('\n有变化的镜头：', changed, '\n未变化：', same)
 result = {'changed': changed, 'same': same, 'sel': sel}
-with open(os.path.join(r'E:\伊雪的活\_blender_out', 'sync_report.json'), 'w', encoding='utf-8') as f:
+with open(os.path.join(r'<渲染临时目录>', 'sync_report.json'), 'w', encoding='utf-8') as f:
     json.dump(result, f, ensure_ascii=False, indent=1)

@@ -4,12 +4,12 @@
 """
 import json, os, shutil, urllib.request
 
-ROOT = r'E:\伊雪的活\ptest\ptest'
-PROJ = '人物替换_NIGHTDANCER'
-OUT = os.path.join(ROOT, PROJ, '成片帧_画布选定')
+PROJ_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CANVAS_URL = os.environ.get('CANVAS_URL', 'http://127.0.0.1:17800')
+OUT = os.path.join(PROJ_DIR, '成片帧_画布选定')
 os.makedirs(OUT, exist_ok=True)
 
-board = json.load(urllib.request.urlopen('http://127.0.0.1:17800/api/board'))
+board = json.load(urllib.request.urlopen(CANVAS_URL + '/api/board'))
 sel, manifest = {}, {'exported': [], 'missing': [], 'at': None}
 for c in board.get('cards', []):
     key = c.get('key') or ''
@@ -17,12 +17,12 @@ for c in board.get('cards', []):
         continue
     shot = key[4:]
     rel = c['src']
-    src = os.path.join(ROOT, rel)
+    src = os.path.join(PROJ_DIR, rel)
     if not os.path.exists(src):
         manifest['missing'].append({'shot': shot, 'src': rel}); continue
     dst = os.path.join(OUT, shot + '.png')
     shutil.copyfile(src, dst)
-    sel[shot] = {'file': os.path.join(PROJ, '成片帧_画布选定', shot + '.png'),
+    sel[shot] = {'file': os.path.join('成片帧_画布选定', shot + '.png'),
                  'src': rel, 'badge': c.get('badge'), 'locked': bool(c.get('locked'))}
     manifest['exported'].append(shot)
 

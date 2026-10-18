@@ -6,17 +6,17 @@
 
 状态写到 _canvas/data/render_status.json，供画布轮询。
 """
-import json, os, sys, time, subprocess, shutil, urllib.request
+import json, os, sys, time, subprocess, shutil, urllib.request, tempfile
 
-ROOT = r'E:\伊雪的活\ptest\ptest'
-PROJ = os.path.join(ROOT, '人物替换_NIGHTDANCER')
+PROJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(PROJ, '工具')
 V7 = os.path.join(PROJ, '关键帧_替换_v7')
 SEL = os.path.join(PROJ, '成片帧_画布选定')
-OUTBASE = r'E:\伊雪的活\_blender_out\render_job'
-FF = r'E:\伊雪的活\网页视频下载器\bin\ffmpeg\ffmpeg.exe'
-BLENDER = r'E:\Blender52\blender-5.2.2-windows-x64\blender.exe'
-STATUS = os.path.join(ROOT, '_canvas', 'data', 'render_status.json')
+OUTBASE = os.environ.get('RENDER_OUT', os.path.join(tempfile.gettempdir(), '_blender_out', 'render_job'))
+FF = os.environ.get('FFMPEG', 'ffmpeg')
+BLENDER = os.environ.get('BLENDER', 'blender')
+CANVAS_URL = os.environ.get('CANVAS_URL', 'http://127.0.0.1:17800')
+STATUS = os.environ.get('RENDER_STATUS', os.path.join(tempfile.gettempdir(), 'render_status.json'))
 FPS = 30
 MAX_PARALLEL = 3                     # 并发 Blender 进程数（GPU 1080Ti 实测 3 路最优）
 W, H = 1920, 1080
@@ -47,7 +47,7 @@ def api(path):
     last = None
     for _ in range(40):
         try:
-            return json.load(urllib.request.urlopen('http://127.0.0.1:17800' + path, timeout=10))
+            return json.load(urllib.request.urlopen(CANVAS_URL + path, timeout=10))
         except Exception as e:
             last = e
             time.sleep(1.5)
@@ -68,7 +68,7 @@ def sync_board():
         k = card.get('key') or ''
         if not k.startswith('out:') or not card.get('src'): continue
         shot = k[4:]
-        src = os.path.join(ROOT, card['src'])
+        src = os.path.join(os.path.dirname(PROJ), card['src'])
         if not os.path.exists(src): continue
         sels[shot] = card['src']
         dst = os.path.join(V7, shot + '_v7.png')
@@ -92,7 +92,7 @@ def build_film():
         lab.append(f'[v{ai}]'); ai += 1
     fc = ';'.join(ch) + ';' + ''.join(lab) + f'concat=n={len(lab)}:v=1:a=0[vout]'
     dst = os.path.join(PROJ, '成片', '一键渲染_全运镜_1080p.mp4')
-    subprocess.run([FF, '-y'] + ins + ['-i', os.path.join(PROJ, '素材', '源视频_NIGHTDANCER.mp4'),
+    subprocess.run([FF, '-y'] + ins + ['-i', os.environ.get('SOURCE_VIDEO', os.path.join(PROJ, '素材', '源视频.mp4')),
                     '-filter_complex', fc, '-map', '[vout]', '-map', f'{ai}:a:0',
                     '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
                     '-r', str(FPS), '-c:a', 'aac', '-b:a', '192k', '-shortest', dst], check=True, capture_output=True)

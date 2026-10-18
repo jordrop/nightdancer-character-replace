@@ -71,12 +71,12 @@ python 工具\blender_tcp_client.py "print(bpy.app.version_string)"
 python 工具\blender_tcp_client.py --file 工具\你的脚本.py
 
 # 一行命令渲染一帧（示例）
-python 工具\blender_tcp_client.py "bpy.context.scene.render.filepath=r'E:\伊雪的活\_blender_out\test.png'; bpy.ops.render.render(write_still=True)"
+python 工具\blender_tcp_client.py "bpy.context.scene.render.filepath=r'<渲染临时目录>\test.png'; bpy.ops.render.render(write_still=True)"
 ```
 
 Python 里当客户端用：
 ```python
-import sys; sys.path.insert(0, r'E:\伊雪的活\ptest\ptest\人物替换_NIGHTDANCER\工具')
+import sys; sys.path.insert(0, r'<画布根>/人物替换_NIGHTDANCER\工具')
 from blender_tcp_client import call
 r = call({"id": 1, "cmd": "exec", "code": "bpy.context.scene.render.engine"})
 print(r["result"])

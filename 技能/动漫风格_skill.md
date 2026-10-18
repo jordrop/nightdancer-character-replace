@@ -1,7 +1,7 @@
 # 动漫风格 Skill（本地版 · 用于人物替换生成）
 
 > 说明：UpDream 的技能市场需要邀请制账号、即梦网页版技能无法通过 CLI 导出，所以这里落地成**项目内可执行的动漫风格规范 + 提示词模板**，生成时直接拼到 prompt 里。
-> 依据：源片《NIGHT DANCER》的赛璐璐画风 + 女主设定图 + 梁文峰三视图。
+> 依据：源片《NIGHT DANCER》的赛璐璐画风 + 女主设定图 + M1三视图。
 
 ## 1. 风格硬规则（每条生成都必须带）
 
@@ -25,7 +25,7 @@
 ## 3. 生成参数（已固化）
 
 ```powershell
-dreamina image2image --images "<源帧>,<女主设定图>,<梁文峰三视图>" --prompt "<模板+帧指令>" `
+dreamina image2image --images "<源帧>,<女主设定图>,<M1三视图>" --prompt "<模板+帧指令>" `
   --model_version=5.0 --resolution_type=2k --ratio=16:9 --generate_num=1 --poll=240
 ```
 
