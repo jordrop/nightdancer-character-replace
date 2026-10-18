@@ -1,4 +1,4 @@
-# 人物替换 · NIGHT DANCER（关键帧版）
+﻿# 人物替换 · NIGHT DANCER（关键帧版）
 
 > 画布：**b4**「人物替换 · NIGHT DANCER 超市后抽烟（关键帧）」
 > 打开：`http://127.0.0.1:17800/` → 顶部画布下拉选这块（服务端当前画布已切到 b4）
@@ -34,3 +34,14 @@
 3. **画风路线**：A 动漫重绘（推荐）/ B 实拍贴图 / C 折中
 
 确认后先跑 **T4（侧脸特写）** 一张试水，约 6 积分；风格确认后再批量。
+
+## 安全与密钥
+
+本仓库**不含任何密钥**：
+
+- `config.example.json` 是配置模板；复制成 `config.local.json` 后填入 `apiKey`（该文件已被 `.gitignore` 忽略）
+- 也可以用环境变量：`DEEPSEEK_API_KEY`（或 `AI_API_KEY` / `AI_BASE_URL` / `AI_MODEL`）
+- 画布服务（`_canvas/server.mjs`）按 **config.json → config.local.json → 环境变量** 分层加载，最高优先级是环境变量
+- 浏览器端不会拿到明文 key：`/api/config` 只返回 `serverKey: true/false`
+
+如果你 fork 本仓库，请先删除自己本地可能存在的 `config.local.json`，再提交。

@@ -10,3 +10,10 @@ __pycache__/
 成片帧_*/
 素材/
 _old/
+config.local.json
+**/config.local.json
+*.key
+.env
+.env.*
+_canvas/config.json
+_canvas/data/
