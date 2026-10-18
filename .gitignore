@@ -17,3 +17,9 @@ config.local.json
 .env.*
 _canvas/config.json
 _canvas/data/
+_canvas/boards/
+_canvas/thumbs/
+_canvas/verify/
+_canvas/py/
+_canvas/config.local.json
+_canvas/board*.json

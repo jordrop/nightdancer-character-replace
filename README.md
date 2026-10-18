@@ -45,3 +45,36 @@
 - 浏览器端不会拿到明文 key：`/api/config` 只返回 `serverKey: true/false`
 
 如果你 fork 本仓库，请先删除自己本地可能存在的 `config.local.json`，再提交。
+
+## Web 画布（内置 canvas 系统）
+
+`_canvas/` 是一套本地节点图画布，用于「人工选图 + 保存锁定 + 一键渲染」。
+
+```powershell
+# 启动（默认 127.0.0.1:17800，服务目录为其父目录）
+$env:CANVAS_PORT = "17800"
+$env:DSH_PYTHON = "python"          # 可选
+node _canvas/server.mjs
+# 浏览器打开 http://127.0.0.1:17800/
+```
+
+功能：
+
+- 分层节点图（素材 / 源帧 / 成片帧 / 文档 / 成片层），拖拽/缩放/连线
+- 结果卡版本下拉（`关键帧_替换_全部` 等目录）→ 选中即写单卡并 `locked`，不被自动接线覆盖
+- 💾 保存（整板 + 逐张单卡双写）、🎬 一键渲染（并发 Blender GPU → ffmpeg 合成）、⛶ 全屏
+- 右侧 AI 助手（内置操作手，可读写项目文件）+ 即梦生成进度面板
+- `pipeline.html` 制作流水线视图
+
+> 数据文件位于 `_canvas/boards/`、`_canvas/data/`（已在 .gitignore 中排除，属于你的私有工作数据）。
+
+## 安全与密钥
+
+本仓库**不含任何密钥**：
+
+- `config.example.json` 是配置模板；复制成 `config.local.json` 后填入 `apiKey`（该文件已被 `.gitignore` 忽略）
+- 也可以用环境变量：`DEEPSEEK_API_KEY`（或 `AI_API_KEY` / `AI_BASE_URL` / `AI_MODEL`）
+- 画布服务（`_canvas/server.mjs`）按 **config.json → config.local.json → 环境变量** 分层加载，最高优先级是环境变量
+- 浏览器端不会拿到明文 key：`/api/config` 只返回 `serverKey: true/false`
+
+如果你 fork 本仓库，请先删除自己本地可能存在的 `config.local.json`，再提交。

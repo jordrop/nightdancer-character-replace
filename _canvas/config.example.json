@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "models": [
+    "deepseek-flash",
+    "deepseek-v4-pro",
+    "deepseek-chat",
+    "deepseek-reasoner"
+  ],
+  "note": "本文件可公开提交：不含任何密钥。密钥放 config.local.json（已 gitignore）或环境变量 DEEPSEEK_API_KEY。"
+}
