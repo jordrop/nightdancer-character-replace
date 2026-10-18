@@ -46,6 +46,22 @@
 
 如果你 fork 本仓库，请先删除自己本地可能存在的 `config.local.json`，再提交。
 
+## 一条命令启动
+
+```bat
+:: Windows 双击或命令行
+start-canvas.bat
+```
+
+```bash
+# macOS / Linux / WSL
+./start-canvas.sh
+# 或
+npm run canvas
+```
+
+启动后浏览器打开 **http://127.0.0.1:17800/**。
+
 ## Web 画布（内置 canvas 系统）
 
 `_canvas/` 是一套本地节点图画布，用于「人工选图 + 保存锁定 + 一键渲染」。
@@ -78,3 +94,4 @@ node _canvas/server.mjs
 - 浏览器端不会拿到明文 key：`/api/config` 只返回 `serverKey: true/false`
 
 如果你 fork 本仓库，请先删除自己本地可能存在的 `config.local.json`，再提交。
+
