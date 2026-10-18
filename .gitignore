@@ -22,3 +22,13 @@ _canvas/verify/
 _canvas/py/
 _canvas/config.local.json
 _canvas/board*.json
+
+# 第三方模型素材 / 本地产物（不入库）
+Other/
+即梦产物/
+参考上传/
+人物替换_NIGHTDANCER/
+_启动截图.png
+_运行截图.png
+_搬运验证截图.png
+_blender_out/
