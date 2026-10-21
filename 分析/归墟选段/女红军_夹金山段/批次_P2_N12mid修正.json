@@ -1,0 +1,21 @@
+{
+ "defaults": {
+  "model_version": "5.0",
+  "ratio": "16:9",
+  "resolution_type": "2k",
+  "generate_num": 1
+ },
+ "jobs": [
+  {
+   "name": "KA_N12_mid_v2",
+   "mode": "image2image",
+   "refs": [
+    "L:\\giehub-test\\参考上传\\无归原_资产\\女红军_夹金山\\补全批次/nj_key_avalanche.png",
+    "L:\\giehub-test\\参考上传\\无归原_资产\\女红军_夹金山\\角色/NJ_C3_刘英原型.png",
+    "L:\\giehub-test\\参考上传\\无归原_资产\\女红军_夹金山\\角色/NJ_C8_群像.png",
+    "L:\\giehub-test\\参考上传\\无归原_资产/S1_灰岭山口_v2_V1000.png"
+   ],
+   "prompt": "雪坡中景：一名穿灰蓝旧棉衣的女战士抓住骡子尾巴向上走，风雪很大，队伍在她身后；同一镜头、同一角色、同一场景、同一光色；保持服装/绑腿/草鞋一致；无文字/logo；不穿模；V4.0：色温6500K；照度4000lux；雪反射率85%；单帧电影画面；16:9。"
+  }
+ ]
+}

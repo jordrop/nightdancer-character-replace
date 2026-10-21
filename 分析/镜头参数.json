@@ -1,0 +1,347 @@
+{
+ "schema_version": 1,
+ "generated_by": "工具/shot_params.py build v1.0",
+ "generated_at": "2026-10-19T00:45:38+08:00",
+ "source": "素材/源视频_NIGHTDANCER.mp4",
+ "width": 1920,
+ "height": 1080,
+ "fps": 30.0,
+ "duration": 91.0,
+ "provenance": {
+  "root": ".",
+  "shots": "分析/镜头分组.json",
+  "motion": "分析/运镜位移.json",
+  "overrides": "分析/运镜指定.json"
+ },
+ "shots": [
+  {
+   "key": "K01",
+   "start": 0.0,
+   "end": 8.0,
+   "mid": 4.0,
+   "frames": 240,
+   "file": "",
+   "content_shift_px": [
+    0.0,
+    30.0
+   ],
+   "content_per_sec_px": [
+    0.0,
+    3.75
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     380.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "axis": "y",
+    "sign": 1,
+    "px": 380.0,
+    "speed_px_s": 3.75,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K02",
+   "start": 8.5,
+   "end": 22.5,
+   "mid": 15.5,
+   "frames": 420,
+   "file": "",
+   "content_shift_px": [
+    6.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    0.429,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     -180.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "px": 180.0,
+    "diagonal": false,
+    "approx": false,
+    "axis": "x",
+    "sign": -1
+   }
+  },
+  {
+   "key": "K03",
+   "start": 23.0,
+   "end": 24.5,
+   "mid": 23.75,
+   "frames": 45,
+   "file": "",
+   "content_shift_px": [
+    0.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    0.0,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "static",
+    "px": 0.0,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K04",
+   "start": 25.0,
+   "end": 33.0,
+   "mid": 29.0,
+   "frames": 240,
+   "file": "",
+   "content_shift_px": [
+    -6.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    -0.75,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     180.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "px": 180.0,
+    "diagonal": false,
+    "approx": false,
+    "axis": "y",
+    "sign": 1
+   }
+  },
+  {
+   "key": "K05",
+   "start": 33.5,
+   "end": 41.0,
+   "mid": 37.25,
+   "frames": 225,
+   "file": "",
+   "content_shift_px": [
+    6.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    0.8,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     180.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "px": 180.0,
+    "diagonal": false,
+    "approx": false,
+    "axis": "x",
+    "sign": 1
+   }
+  },
+  {
+   "key": "K06",
+   "start": 41.5,
+   "end": 49.0,
+   "mid": 45.25,
+   "frames": 225,
+   "file": "",
+   "content_shift_px": [
+    18.0,
+    -219.0
+   ],
+   "content_per_sec_px": [
+    2.4,
+    -29.2
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     -180.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "axis": "y",
+    "sign": -1,
+    "px": 180.0,
+    "speed_px_s": 29.2,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K07",
+   "start": 49.5,
+   "end": 57.5,
+   "mid": 53.5,
+   "frames": 240,
+   "file": "",
+   "content_shift_px": [
+    3.0,
+    -69.0
+   ],
+   "content_per_sec_px": [
+    0.375,
+    -8.625
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     180.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "axis": "x",
+    "sign": 1,
+    "px": 180.0,
+    "speed_px_s": 8.625,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K08",
+   "start": 58.0,
+   "end": 73.0,
+   "mid": 65.5,
+   "frames": 450,
+   "file": "",
+   "content_shift_px": [
+    87.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    5.8,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     -180.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "axis": "x",
+    "sign": -1,
+    "px": 180.0,
+    "speed_px_s": 5.8,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K09",
+   "start": 73.5,
+   "end": 74.0,
+   "mid": 73.75,
+   "frames": 15,
+   "file": "",
+   "content_shift_px": [
+    12.0,
+    -3.0
+   ],
+   "content_per_sec_px": [
+    24.0,
+    -6.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "static",
+    "px": 0.0,
+    "speed_px_s": 24.0,
+    "diagonal": false,
+    "approx": false
+   }
+  },
+  {
+   "key": "K10",
+   "start": 74.5,
+   "end": 85.5,
+   "mid": 80.0,
+   "frames": 330,
+   "file": "",
+   "content_shift_px": [
+    3.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    0.273,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     180.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "pan",
+    "px": 180.0,
+    "diagonal": false,
+    "approx": false,
+    "axis": "x",
+    "sign": 1
+   }
+  },
+  {
+   "key": "K11",
+   "start": 86.0,
+   "end": 91.0,
+   "mid": 88.5,
+   "frames": 150,
+   "file": "",
+   "content_shift_px": [
+    0.0,
+    0.0
+   ],
+   "content_per_sec_px": [
+    0.0,
+    0.0
+   ],
+   "motion_desc": "",
+   "camera": {
+    "travel_px": [
+     0.0,
+     0.0
+    ],
+    "source": "manual",
+    "mode": "static",
+    "px": 0.0,
+    "diagonal": false,
+    "approx": false
+   }
+  }
+ ]
+}

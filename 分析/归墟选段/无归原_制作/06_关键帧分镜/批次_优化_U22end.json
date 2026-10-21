@@ -1,0 +1,18 @@
+{
+ "defaults": {
+  "model_version": "5.0",
+  "ratio": "16:9",
+  "resolution_type": "2k",
+  "generate_num": 1
+ },
+ "jobs": [
+  {
+   "name": "KA_U22_end_v3",
+   "mode": "image2image",
+   "refs": [
+    "L:\\giehub-test\\参考上传\\无归原_资产\\优化批次_20261019\\KA_U22_mid_v2.png"
+   ],
+   "prompt": "低雾远景：同一团巨大非人轮廓正在被雾吞没、退远、变淡；保持非人形肿块/山影轮廓，不要出现头、肩、躯干或人形剪影，不露全貌、无五官；前景枯草与泥沼极小；冷灰低对比、低饱和；单帧电影画面，不要拼图/多格；无文字无logo。"
+  }
+ ]
+}

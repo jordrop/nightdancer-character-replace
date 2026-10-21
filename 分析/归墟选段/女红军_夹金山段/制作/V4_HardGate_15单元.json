@@ -1,0 +1,977 @@
+[
+ {
+  "unit": "N01",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_01；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "围堵/会合"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "46 字 → 11.7s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "会议拍板：翻夹金山"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "窗外雪山，切夜行纵队"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 慢/固定"
+   }
+  ]
+ },
+ {
+  "unit": "N02",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_01；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "时间/路线紧迫"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "37 字 → 9.6s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "目标：夹金山"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "夹金山雪峰在雾里露出"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 中/横移"
+   }
+  ]
+ },
+ {
+  "unit": "N03",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_02；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "神山传说"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "37 字 → 9.6s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "老爷爷：你们还是回去吧"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "老爷爷转身，留下一句"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 慢/固定"
+   }
+  ]
+ },
+ {
+  "unit": "N04",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_02；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "死亡威胁具体化"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "48 字 → 12.2s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "李坚真忐忑：这山真有这么厉害？"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "李坚真低声追问"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 慢/轻推"
+   }
+  ]
+ },
+ {
+  "unit": "N05",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_02；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 5 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "怕与不怕"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "33 字 → 8.7s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "决定上山"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "李坚真看向山顶"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 中/上摇"
+   }
+  ]
+ },
+ {
+  "unit": "N06",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 5 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "情报就是命"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "59 字 → 14.7s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "只有一次机会"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "老乡把拐棍递过来"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 2 级 → 慢/固定"
+   }
+  ]
+ },
+ {
+  "unit": "N07",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 6 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "单衣没粮，只能靠辣椒扛"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "12 字 → 3.8s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "次日出发"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "琼香/金维映/刘彩香闭眼端碗"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 2 级 → 中/手持"
+   }
+  ]
+ },
+ {
+  "unit": "N08",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "时间窗口9–15点"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "22 字 → 6.1s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "5 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "开始登山"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "队伍向雪坡上移动"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 中/跟移"
+   }
+  ]
+ },
+ {
+  "unit": "N09",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "掉队就是死"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "16 字 → 4.7s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "5 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "队伍不能停"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "两人对视，继续往上"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 快/手持"
+   }
+  ]
+ },
+ {
+  "unit": "N10",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "身体极限"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "18 字 → 5.2s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "不能拖累队伍"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "两人继续向坡上走"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 慢/固定"
+   }
+  ]
+ },
+ {
+  "unit": "N11",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 5 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "缺水缺粮"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "31 字 → 8.2s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "短暂轻松，危机将至"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "琼香掏出糖精小包，众人凑过来"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 中/手持"
+   }
+  ]
+ },
+ {
+  "unit": "N12",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_03；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 6 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "雪崩/走不动"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "9 字 → 3.1s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "5 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "抓住活路"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "队伍在雪雾中继续向上"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 快/甩镜"
+   }
+  ]
+ },
+ {
+  "unit": "N13",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_04；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 5 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "最后一段坡"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "65 字 → 16.1s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "士气回升"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "女红军唱兴国山歌，众人抬头"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 4 级 → 中/手持"
+   }
+  ]
+ },
+ {
+  "unit": "N14",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_05；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 5 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "体力极限"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "31 字 → 8.2s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "继续往上"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "李坚真组织搀扶，继续向上"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 5 级 → 快/手持"
+   }
+  ]
+ },
+ {
+  "unit": "N15",
+  "checks": [
+   {
+    "item": "时长",
+    "pass": true,
+    "note": "20s 适配版；V4.0 严格 15s 未采用（已标注偏差）"
+   },
+   {
+    "item": "剧情锁",
+    "pass": true,
+    "note": "source_full=nj_full_05；事件顺序按镜头表"
+   },
+   {
+    "item": "角色身份",
+    "pass": true,
+    "note": "身份锁 4 项"
+   },
+   {
+    "item": "连续性",
+    "pass": true,
+    "note": "承接上一段 + next_anchor 已填"
+   },
+   {
+    "item": "主变化",
+    "pass": true,
+    "note": "翻过去了"
+   },
+   {
+    "item": "台词可执行",
+    "pass": true,
+    "note": "20 字 → 5.7s ≤20s"
+   },
+   {
+    "item": "空间连续",
+    "pass": true,
+    "note": "坐标 3 条"
+   },
+   {
+    "item": "复杂度",
+    "pass": true,
+    "note": "4 镜"
+   },
+   {
+    "item": "反应链",
+    "pass": true,
+    "note": "下一段：草地"
+   },
+   {
+    "item": "可见结尾",
+    "pass": true,
+    "note": "山下云海，钩子画面"
+   },
+   {
+    "item": "物理量纲连续",
+    "pass": true,
+    "note": "K/lux/反射/雾已填"
+   },
+   {
+    "item": "运镜-情绪",
+    "pass": true,
+    "note": "情绪 3 级 → 慢/拉远"
+   }
+  ]
+ }
+]

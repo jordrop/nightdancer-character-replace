@@ -1,0 +1,19 @@
+{
+ "defaults": {
+  "model_version": "5.0",
+  "ratio": "16:9",
+  "resolution_type": "2k",
+  "generate_num": 1
+ },
+ "jobs": [
+  {
+   "name": "nj_key_march_v2",
+   "mode": "image2image",
+   "refs": [
+    "L:\\giehub-test\\参考上传\\无归原_资产\\S1_灰岭山口_v2_V1000.png",
+    "L:\\giehub-test\\参考上传\\无归原_资产\\女红军_夹金山\\角色\\NJ_C8_群像.png"
+   ],
+   "prompt": "雪坡上：一列女红军沿踏脚孔往上爬，每人一根木棍敲雪探路，队伍越拉越长；战旗是**纯红色布旗，没有任何星星、图案、文字或徽记**（不要五星，不要任何标志）；大远景，人很小，冷蓝灰、风雪；写实电影感；单帧；无文字无logo；人物不穿模。"
+  }
+ ]
+}

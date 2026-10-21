@@ -1,0 +1,60 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,46,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,0,2,80,80,70,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.20,0:00:03.60,Default,,0,0,0,,避开人烟稠密地区，向北走雪山一线，与四方面军会合。
+Dialogue: 0,0:00:04.80,0:00:07.20,Default,,0,0,0,,另派陈云去上海，恢复白区党的组织。
+Dialogue: 0,0:00:08.40,0:00:10.80,Default,,0,0,0,,翻过夹金山，才有活路。
+Dialogue: 0,0:00:13.20,0:00:16.80,Default,,0,0,0,,主力乘虚取懋功、理番；支队掠邛崃以东，迷惑敌人。
+Dialogue: 0,0:00:18.00,0:00:21.60,Default,,0,0,0,,迅雷不及掩耳，突破芦山、宝兴。
+Dialogue: 0,0:00:22.20,0:00:23.40,Default,,0,0,0,,目标：夹金山。
+Dialogue: 0,0:00:25.40,0:00:28.20,Default,,0,0,0,,夹金山，神仙山，六月里飞霜带雪寒……
+Dialogue: 0,0:00:29.60,0:00:33.80,Default,,0,0,0,,这是神仙山，除了神仙，连鸟都飞不过去。
+Dialogue: 0,0:00:34.50,0:00:37.30,Default,,0,0,0,,你们还是回去吧。
+Dialogue: 0,0:00:39.40,0:00:45.00,Default,,0,0,0,,有一年大旱，乡亲们抬着菩萨上山求雨，没吃斋祈祷，神仙一怒……
+Dialogue: 0,0:00:45.00,0:00:49.90,Default,,0,0,0,,把人都阻留在山上，一个也没有回来。
+Dialogue: 0,0:00:50.60,0:00:52.00,Default,,0,0,0,,这山……真有这么厉害？
+Dialogue: 0,0:00:53.40,0:00:56.20,Default,,0,0,0,,上山，不累死饿死，也会冻死。
+Dialogue: 0,0:00:57.60,0:01:00.40,Default,,0,0,0,,怕什么，神仙不可怕。
+Dialogue: 0,0:01:01.10,0:01:04.60,Default,,0,0,0,,老乡说这是神山——那我们就是神军。
+Dialogue: 0,0:01:07.40,0:01:10.90,Default,,0,0,0,,夹金山上上下下三十多公里，只有早上九点到下午三点能走。
+Dialogue: 0,0:01:11.60,0:01:15.10,Default,,0,0,0,,绝对不能在山里过夜，会冻死的。
+Dialogue: 0,0:01:15.80,0:01:19.30,Default,,0,0,0,,多穿衣服，带上烈酒、辣椒，手里一根拐棍，三条腿走路。
+Dialogue: 0,0:01:21.20,0:01:23.00,Default,,0,0,0,,喝！
+Dialogue: 0,0:01:23.60,0:01:26.00,Default,,0,0,0,,辣——！
+Dialogue: 0,0:01:27.20,0:01:29.00,Default,,0,0,0,,眼泪都出来了。
+Dialogue: 0,0:01:29.60,0:01:31.40,Default,,0,0,0,,喝完，上路。
+Dialogue: 0,0:01:33.40,0:01:36.20,Default,,0,0,0,,征服夹金山，创造行军奇迹！
+Dialogue: 0,0:01:37.60,0:01:40.40,Default,,0,0,0,,不要停，冲上山去！
+Dialogue: 0,0:01:41.80,0:01:44.60,Default,,0,0,0,,跟上，踩实！
+Dialogue: 0,0:01:47.40,0:01:49.50,Default,,0,0,0,,跟上，快跟上，千万不要掉队！
+Dialogue: 0,0:01:51.60,0:01:53.70,Default,,0,0,0,,抓住！
+Dialogue: 0,0:01:55.80,0:01:58.60,Default,,0,0,0,,手给我！
+Dialogue: 0,0:02:01.40,0:02:03.50,Default,,0,0,0,,泉媛，能挺得住吗？
+Dialogue: 0,0:02:04.90,0:02:07.00,Default,,0,0,0,,没事，我能坚持。
+Dialogue: 0,0:02:09.80,0:02:12.60,Default,,0,0,0,,别停，慢慢走。
+Dialogue: 0,0:02:15.40,0:02:17.50,Default,,0,0,0,,吃雪呀！
+Dialogue: 0,0:02:18.20,0:02:20.30,Default,,0,0,0,,来例假不能吃凉东西。
+Dialogue: 0,0:02:21.00,0:02:23.10,Default,,0,0,0,,命都保不住了，顾不了那么多。
+Dialogue: 0,0:02:23.80,0:02:25.90,Default,,0,0,0,,差点忘了——糖精！
+Dialogue: 0,0:02:26.60,0:02:28.00,Default,,0,0,0,,甜！
+Dialogue: 0,0:02:33.60,0:02:36.40,Default,,0,0,0,,抓住尾巴！省力！
+Dialogue: 0,0:02:37.80,0:02:40.60,Default,,0,0,0,,我也来！
+Dialogue: 0,0:02:43.60,0:02:48.40,Default,,0,0,0,,裹脚要用布和棕，包得不紧又不松。到了山顶莫停留，革命的道路不能停。
+Dialogue: 0,0:02:50.00,0:02:54.80,Default,,0,0,0,,哎呀嘞——大雾围山山重山，红军队伍过雪山。千难万难都不怕，同志们哟——红军面前没困难。
+Dialogue: 0,0:02:56.40,0:02:58.00,Default,,0,0,0,,走！
+Dialogue: 0,0:02:59.40,0:03:02.20,Default,,0,0,0,,我……我能走！
+Dialogue: 0,0:03:03.60,0:03:07.80,Default,,0,0,0,,小同志，快走啊！这里空气稀薄，停留不得，翻过山就是胜利！
+Dialogue: 0,0:03:09.20,0:03:11.30,Default,,0,0,0,,扶起来，走！
+Dialogue: 0,0:03:13.20,0:03:15.00,Default,,0,0,0,,走喽——！
+Dialogue: 0,0:03:16.80,0:03:20.40,Default,,0,0,0,,翻过这座山，前面还有更长的路。
+Dialogue: 0,0:03:21.60,0:03:23.40,Default,,0,0,0,,下一段：草地。

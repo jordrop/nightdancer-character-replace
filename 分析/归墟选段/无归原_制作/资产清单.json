@@ -1,0 +1,358 @@
+{
+ "project": "无归原（第三章·架空化）",
+ "created": "2026-10-19",
+ "chars": [
+  {
+   "id": "C1",
+   "name": "沈雾",
+   "role": "队长",
+   "anchor": "女，28岁，黑短发束起，左眉一道旧疤，灰蓝围巾，深灰棉甲，短刀",
+   "prompt": "01_人物设定/C1_沈雾.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/C1_沈雾_三视图_v1.png",
+   "credits": 3
+  },
+  {
+   "id": "C2",
+   "name": "赵岩",
+   "role": "老兵/断后",
+   "anchor": "女，35岁，高个，旧皮帽，粗辫，猎弓，右手缺半指",
+   "prompt": "01_人物设定/C2_赵岩.prompt.md",
+   "status": "已出图 v2（棉装）",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/C2_赵岩_三视图_v2_棉装.png",
+   "credits": 3
+  },
+  {
+   "id": "C3",
+   "name": "顾青",
+   "role": "医者",
+   "anchor": "女，30岁，圆框裂镜，白口罩挂耳，旧药箱",
+   "prompt": "01_人物设定/C3_顾青.prompt.md",
+   "status": "已出图（v2 修正）",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/C3_顾青_三视图_v2_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "C4",
+   "name": "阿荞",
+   "role": "最小/情绪锚",
+   "anchor": "女，14岁，双辫红绳，过长的大棉袄，腰间旧铜铃",
+   "prompt": "01_人物设定/C4_阿荞.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/C4_阿荞_三视图_v1.png",
+   "credits": 3
+  }
+ ],
+ "props": [
+  {
+   "id": "P1",
+   "name": "铜铃",
+   "anchor": "旧铜铃，铃身凹痕与冰霜，挂在石堆/阿荞腰间",
+   "prompt": "02_道具设定/P1_铜铃.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/P1_铜铃_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "P2",
+   "name": "火种罐",
+   "anchor": "旧铁皮火种罐，罐口有灼痕，内有一点火",
+   "prompt": "02_道具设定/P2_火种罐.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/P2_火种罐_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "P3",
+   "name": "短刀",
+   "anchor": "沈雾左腰短刀，刀鞘缠布",
+   "prompt": "02_道具设定/P3_短刀.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/P3_短刀_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "P4",
+   "name": "药箱",
+   "anchor": "顾青的旧木药箱，铜扣生锈",
+   "prompt": "02_道具设定/P4_药箱.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/P4_药箱_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "P5",
+   "name": "红绳绑带",
+   "anchor": "整卷旧布绑带，染过雪水",
+   "prompt": "02_道具设定/P5_红绳/绑带.prompt.md",
+   "status": "已出图",
+   "est_credits": 3,
+   "file": "参考上传/无归原_资产/P5_红绳绑带_v1_V1000.png",
+   "credits": 3
+  }
+ ],
+ "scenes": [
+  {
+   "id": "S1",
+   "name": "灰岭·山口",
+   "ref": "参考上传/无归原_场景参考_草地/纯净帧_01_云海山脊_t63.png",
+   "status": "已出图",
+   "file": "参考上传/无归原_资产/S1_灰岭山口_v2_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "S2",
+   "name": "雪坡与雪崩",
+   "ref": "参考上传/无归原_场景参考_草地/纯净帧_05_草原压顶乌云_t230.png",
+   "status": "已出图",
+   "file": "参考上传/无归原_资产/S2_雪坡雪崩_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "S3",
+   "name": "无归原·沼泽",
+   "ref": "参考上传/无归原_场景参考_草地/纯净帧_02_河曲湿地鸟瞰_t83.png（另见 参考上传/无归原_场景参考_草地/纯净帧_03_草甸水洼纹理_t119.png / 参考上传/无归原_场景参考_草地/纯净帧_04_草甸浅水洼_t205.png）",
+   "status": "已出图",
+   "file": "参考上传/无归原_资产/S3_无归原沼泽_v1.png",
+   "credits": 3
+  },
+  {
+   "id": "S4",
+   "name": "篝火营地",
+   "ref": null,
+   "status": "已出图",
+   "file": "参考上传/无归原_资产/S4_篝火营地_v1_V1000.png",
+   "credits": 3
+  },
+  {
+   "id": "S5",
+   "name": "南屿·灯火",
+   "ref": null,
+   "status": "已出图",
+   "file": "参考上传/无归原_资产/S5_南屿灯火_v1_V1000.png",
+   "credits": 3
+  }
+ ],
+ "cost_rates": {
+  "seedance2.0fast_per_s": 5,
+  "seedance2.5_720p_per_s": 20,
+  "seedance2.0_720p_per_s": 8,
+  "seedance2.5_480p_per_s": 12,
+  "anchor_keyframes_total": 72
+ },
+ "test_T1": {
+  "file": "参考上传/无归原_资产/T1_C1C4_沼泽同框_v1.png",
+  "credits": 3,
+  "status": "已出图"
+ },
+ "v1000_batch": {
+  "count": 10,
+  "credits": 30,
+  "balance_after": 8331,
+  "ab_conclusion": "text2image 有效（更暗更冷、服装修正）；image2image 被参考图主导，差异很小"
+ },
+ "anchor_keyframes": {
+  "units": [
+   "U01",
+   "U02",
+   "U04",
+   "U13",
+   "U19",
+   "U22",
+   "U24",
+   "U32"
+  ],
+  "count": 24,
+  "credits": 72,
+  "dir": "参考上传/无归原_资产/关键帧_三锚点",
+  "select_sheet": "分析/归墟选段/关键帧_三锚点_选集.jpg",
+  "status": "已出图"
+ },
+ "optimization": {
+  "batch": "C2/U22",
+  "credits": 15,
+  "balance_after": 8220,
+  "note": "C2 棉装 v2；U22 open/mid 重跑为非人形，end 由 mid 雾合成（0 成本）；v3 人形失败稿入历史"
+ },
+ "samples": [
+  {
+   "name": "U19_seedance25_480p_15s",
+   "model": "seedance2.5",
+   "res": "480p",
+   "duration": 15,
+   "credits": 180,
+   "file": "即梦产物/无归原_测试/U19_seedance25_480p_15s.mp4",
+   "frames": "分析/归墟选段/U19_样片_2p5_480p_抽帧.jpg"
+  },
+  {
+   "name": "夹金山_20s_短剧测试",
+   "model": "seedance2.5",
+   "res": "480p",
+   "ratio": "16:9",
+   "duration": 20,
+   "credits": 240,
+   "file": "即梦产物/无归原_测试/夹金山_20s_2p5_480p.mp4",
+   "frames": "分析/归墟选段/夹金山_20s_2p5_抽帧.jpg"
+  }
+ ],
+ "nj_characters": {
+  "dir": "参考上传/无归原_资产/女红军_夹金山/角色/",
+  "count": 8,
+  "credits": 24,
+  "files": [
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C1_指导员.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C2_王泉媛原型.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C3_刘英原型.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C4_蔡畅原型.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C5_刘彩香原型.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C6_小红军.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C7_老爷爷.png",
+   "参考上传/无归原_资产/女红军_夹金山/角色/NJ_C8_群像.png"
+  ]
+ },
+ "nj_keyframes": {
+  "dir": "参考上传/无归原_资产/女红军_夹金山/关键帧",
+  "count": 14,
+  "credits": 45,
+  "files": [
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_meeting.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_mountain.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_oldman.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_soup.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_march.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_avalanche.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_stretcher.png",
+   "参考上传/无归原_资产/女红军_夹金山/关键帧/nj_key_summit.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n04_qujing.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n07_risky.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n08_wangquanyuan.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n09_snow.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n04_qiuyu.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_key_n13_kuaiban.png"
+  ]
+ },
+ "nj_props": {
+  "dir": "参考上传/无归原_资产/女红军_夹金山/补全批次/",
+  "count": 8,
+  "credits": 24,
+  "files": [
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_lajiao.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_mugun.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_wan.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_tangjing.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_dandan.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_luozi.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_kuaiban.png",
+   "参考上传/无归原_资产/女红军_夹金山/补全批次/nj_prop_bagu.png"
+  ]
+ },
+ "nj_secondary_characters": {
+  "dir": "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/",
+  "count": 6,
+  "credits": 18,
+  "files": [
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C9_琼香.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C10_金维映.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C11_刘群先.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C12_宣传员.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C13_首长背影.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_C14_会议群像.png"
+  ]
+ },
+ "nj_props_more": {
+  "dir": "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/",
+  "count": 4,
+  "credits": 12,
+  "files": [
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_P9_白酒壶.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_P10_刺刀.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_P11_铁铲.png",
+   "参考上传/无归原_资产/女红军_夹金山/次要角色与道具/NJ_P12_纸笔.png"
+  ]
+ },
+ "nj_production_docs": {
+  "dir": "分析/归墟选段/女红军_夹金山段/制作",
+  "files": [
+   "V4提示词_15单元.md",
+   "V4提示词_15单元.json",
+   "配音表.md",
+   "配音表.csv",
+   "字幕_全片.srt",
+   "音效设计.md"
+  ]
+ },
+ "p0": {
+  "date": "2026-10-19",
+  "credits": 0,
+  "hard_gate": "12/12 PASS (20s 适配版)",
+  "v1000": "15/15 PASS",
+  "shots": 63,
+  "files": [
+   "逐单元镜头表_15单元.md",
+   "制作/V4_HardGate_15单元.md",
+   "制作/V1000四段式自检_15单元.md",
+   "制作/V4提示词_15单元.md",
+   "制作/视频生成预设_15单元.json"
+  ]
+ },
+ "p1": {
+  "credits": 0,
+  "voice": "制作/配音草稿_3分24.wav",
+  "subtitle": "制作/字幕_全片_3分24.srt/ass",
+  "voice_table": "制作/配音表_3分24.md/csv",
+  "sfx": "制作/音效素材清单.md",
+  "boundary": "分镜边界契约_生成与剪辑.md"
+ },
+ "p2": {
+  "credits": 102,
+  "anchors_ok": 31,
+  "anchors_fail": 0,
+  "props": 3,
+  "dir": "参考上传/无归原_资产/女红军_夹金山/P2_三锚点补全",
+  "pending": ""
+ },
+ "clips8": {
+  "total": 204,
+  "clips": 8,
+  "cost_480p": 2448,
+  "cost_720p": 4080,
+  "files": [
+   "生成分段_8段.json",
+   "制作/8段提示词.md",
+   "制作/8段生成预设.json",
+   "绝对时间轴_8段.csv"
+  ]
+ },
+ "clips7": {
+  "total": 204,
+  "clips": 7,
+  "cost_480p": 2448,
+  "cost_720p": 4080,
+  "files": [
+   "生成分段_7段.json",
+   "制作/7段提示词.md",
+   "制作/7段生成预设.json",
+   "绝对时间轴_7段.csv"
+  ]
+ },
+ "g01": {
+  "credits": 560,
+  "file": "即梦产物/女红军_夹金山/成片/G01_28s_2p5_720p.mp4",
+  "res": "1280x720",
+  "duration": 28.06,
+  "balance_after": 7015
+ },
+ "g01_g07": {
+  "total_credits": 4080,
+  "balance_after": 3495,
+  "sample": "即梦产物/女红军_夹金山/成片/sample_7seg_720p.mp4"
+ }
+}
