@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/giehub-test/镜头参数.schema.json",
+  "title": "镜头参数表（Shot Parameter Table）",
+  "description": "参数化视频语言在本地流水线中的落地格式：镜头时间轴 + 内容位移测量 + 相机运动参数 + 渲染预算。由 工具/shot_params.py build 生成、validate 校验、compile 编译成 render_one_shot.py 的 job。",
+  "type": "object",
+  "required": ["schema_version", "source", "fps", "width", "height", "shots"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "generated_by": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "source": { "type": "string", "description": "源视频路径（相对 --root）" },
+    "width": { "type": "integer", "minimum": 1 },
+    "height": { "type": "integer", "minimum": 1 },
+    "fps": { "type": "number", "exclusiveMinimum": 0 },
+    "duration": { "type": "number", "minimum": 0 },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/shot" }
+    }
+  },
+  "$defs": {
+    "shot": {
+      "type": "object",
+      "required": ["key", "start", "end", "frames", "content_shift_px", "camera"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "pattern": "^[KS][0-9]{2}$" },
+        "start": { "type": "number", "minimum": 0 },
+        "end": { "type": "number", "exclusiveMinimum": 0 },
+        "mid": { "type": "number", "minimum": 0 },
+        "frames": { "type": "integer", "minimum": 1 },
+        "file": { "type": "string" },
+        "content_shift_px": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "内容位移（图像坐标：右+ / 下+），对应测量结果"
+        },
+        "content_per_sec_px": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "motion_desc": { "type": "string", "description": "人工可读的运镜描述" },
+        "camera": { "$ref": "#/$defs/camera" }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": ["mode", "travel_px", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "enum": ["static", "pan"] },
+        "axis": { "enum": ["x", "y"], "description": "单轴渲染器使用的主轴" },
+        "sign": { "enum": [-1, 1], "description": "相机位移方向：x 轴 +1=向右，y 轴 +1=向下（与 render_one_shot.py 一致）" },
+        "px": { "type": "number", "minimum": 0, "description": "主轴行程（像素）" },
+        "travel_px": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "相机位移矢量（图像坐标：右+ / 下+），= -内容位移"
+        },
+        "speed_px_s": { "type": "number", "minimum": 0 },
+        "diagonal": { "type": "boolean", "description": "次轴位移 >= 主轴 25% 时为 true" },
+        "approx": { "type": "boolean", "description": "单轴渲染器对斜向运动的近似标记" },
+        "source": { "enum": ["measured", "manual"], "description": "参数来源：测量推导 / 人工指定" }
+      }
+    }
+  }
+}

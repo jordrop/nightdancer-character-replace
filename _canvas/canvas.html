@@ -370,6 +370,14 @@ body.tl-open #dock,body.tl-open #hint,body.tl-open .hint,body.tl-open #hints,bod
 #pv .pv-blk{cursor:ew-resize}
 #pv .pv-ph{pointer-events:none}
 #pv .pv-ph::after{content:'';position:absolute;left:-8px;top:0;bottom:0;width:18px}
+
+.node .imgwrap.vidcover{cursor:pointer}
+.node .imgwrap.vidcover img{object-fit:cover}
+.node .imgwrap .playbtn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(0,0,0,.55);border:1.5px solid rgba(255,255,255,.85);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;pointer-events:none;text-shadow:0 2px 8px #000}
+#vidmodal{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;display:none;align-items:center;justify-content:center;padding:3vw}
+#vidmodal.on{display:flex}
+#vidmodal video{max-width:94vw;max-height:88vh;background:#000;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.8)}
+#vidmodal .vclose{position:absolute;top:18px;right:24px;width:38px;height:38px;border-radius:50%;border:1px solid #555;background:#111;color:#fff;font-size:20px;cursor:pointer}
 </style>
 </head>
 <body>
@@ -385,8 +393,8 @@ body.tl-open #dock,body.tl-open #hint,body.tl-open .hint,body.tl-open #hints,bod
   <button id="saveBtn" onclick="saveNow()" title="把当前画布立即写入磁盘（相当于 Ctrl+S）"
     style="border-color:#4bcf7a;color:#8ef0b0;background:#122016">💾 保存</button>
   <button id="renderBtn" onclick="oneClickRender()" title="按画布选择 + 运镜表，一键并发渲染并合成成片" style="border-color:#c77dff;color:#e0b3ff;background:#1d1226">🎬 一键渲染</button>
-  <button onclick="autoWire()" title="扫描生成目录，把新生成的图自动挂到结果层并连到对应源帧（K01…K11）">⚡ 自动接线</button>
-  <button onclick="tidyBoard()" title="一键整理：按层分列、卡片统一尺寸与间距">🧹 一键整理</button>
+  <button onclick="autoWire()" title="扫描生成目录，把新生成的图挂到对应层并连到对应卡片（人物/场景/关键帧）">⚡ 自动接线</button>
+  <button onclick="tidyBoard()" title="一键整理：每层 N×N 网格、模块 shelf 排列">🧹 一键整理</button>
   <button onclick="fitView()">适应窗口</button>
   <div id="moreWrap" style="position:relative;display:inline-block">
     <button onclick="toggleMoreMenu(event)" title="更多操作">⋯ 更多</button>
@@ -674,7 +682,26 @@ function thumbURL(p,v){ return '/thumb?p='+encodeURIComponent(p)+(v?'&v='+v:'');
 function openLB(p,cap){ $('#lbi').src='/raw?p='+encodeURIComponent(p); $('#lbc').textContent=cap||'';
   $('#lbm').textContent=p; $('#lb').classList.add('on'); }
 function closeLB(){ $('#lb').classList.remove('on'); }
-document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeLB(); hideMenu(); closeGenDialog(); } });
+function openVideo(src,title){
+  let m=document.getElementById('vidmodal');
+  if(!m){
+    m=document.createElement('div'); m.id='vidmodal';
+    m.innerHTML='<button class="vclose" onclick="closeVideo()">×</button><video controls preload="metadata"></video>';
+    document.body.appendChild(m);
+  }
+  const v=m.querySelector('video');
+  v.src='/raw?p='+encodeURIComponent(src);
+  v.play().catch(()=>{});
+  m.classList.add('on');
+  m.onclick=(e)=>{ if(e.target===m) closeVideo(); };
+}
+function closeVideo(){
+  const m=document.getElementById('vidmodal'); if(!m) return;
+  const v=m.querySelector('video'); if(v){ v.pause(); v.removeAttribute('src'); v.load(); }
+  m.classList.remove('on');
+}
+
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeLB(); closeVideo(); hideMenu(); closeGenDialog(); } });
 
 let renderQueued = false;
 function render(){
@@ -777,15 +804,13 @@ function fillNode(el,c){
   if(c.type==='asset'||c.type==='kf'||c.type==='image'||c.type==='video'){
     const job = c.genJob;
     const isVid = c.type==='video';
-    if(isVid && c.src){                                  // 视频节点：内嵌播放器
-      bd.innerHTML = `<div class="imgwrap"><video src="${'/raw?p='+encodeURIComponent(c.src)}" controls preload="metadata"></video>
+    if(isVid && c.src){                                  // 视频节点：默认封面 + 点击播放
+      const cover = c.cover || String(c.src).replace(/\.[^.]+$/, '.jpg');
+      bd.innerHTML = `<div class="imgwrap vidcover"><img loading="lazy" decoding="async" src="${'/raw?p='+encodeURIComponent(cover)}" alt="" onerror="this.style.opacity=.15"><div class="playbtn">▶</div>
         <div class="vidbar"><span>${esc(String(c.src).split('/').pop())}</span></div></div>
         <div class="pr">${esc(c.caption||c.src)}</div>`;
-      const vid = bd.querySelector('video');
-      if(vid) vid.onerror = ()=>{ const w=bd.querySelector('.imgwrap');
-        if(w) w.innerHTML = `<div class="broken">找不到视频文件<div class="bp">${esc(c.src||'')}</div>
-          <div class="bh"><button class="mini" onclick="uploadToNode('${c.id}')">重新上传</button>
-          <button class="mini" onclick="removeNode('${c.id}')">删除节点</button></div></div>`; };
+      const wrap = bd.querySelector('.imgwrap');
+      if(wrap) wrap.onclick = ()=>openVideo(c.src, c.title||c.src);
       return;
     }
     if(isVid && !c.src){
@@ -1114,75 +1139,103 @@ async function refreshVerMap(){
   S.verMap = groupVersions(all);
   return S.verMap;
 }
-/* 自动接线：每个 K## 取「最新生成」的版本挂到结果卡（新图直接替换旧图），并连到源帧 */
+/* 自动接线（通用版）：扫描项目生成目录，把未上画布的图挂到对应卡片并连线 */
+const AUTO_SCAN_DIRS = [
+  '参考上传/无归原_资产',
+  '参考上传/无归原_资产/关键帧',
+  '参考上传/无归原_资产/关键帧_三锚点',
+  '参考上传/无归原_资产/历史版本_优化'
+];
+function autoParentCard(name){
+  const cards = S.board.cards || [];
+  let m = /KA_(U\d{2})_(open|mid|end)/.exec(name);
+  if(m) return cards.find(c=>c.id==='wnu_kf_'+m[1].toLowerCase()) || cards.find(c=>String(c.title||'').indexOf(m[1])===0) || null;
+  m = /^K_(U\d{2})/.exec(name);
+  if(m) return cards.find(c=>c.id==='wnu_kf_'+m[1].toLowerCase()) || null;
+  m = /^(C\d|P\d|S\d)_/.exec(name);
+  if(m) return cards.find(c=>c.id==='wnu_'+m[1].toLowerCase()) || null;
+  return null;
+}
 async function autoWire(silent){
   if(S.autoWireBusy) return;
   S.autoWireBusy = true;
   try{
     if(!silent) toast('自动接线：扫描生成目录…');
-    await refreshVerMap();
-    const keys = Object.keys(S.verMap).sort();
-    if(!keys.length){ if(!silent) toast('没扫到形如 K01…/K11… 的生成图'); return; }
-    let added=0, updated=0, wired=0;
     const cards = S.board.cards || (S.board.cards=[]);
     const edges = S.board.edges || (S.board.edges=[]);
-    const byKey = (k)=> cards.find(c=>c.key===k) || null;
-    for(const k of keys){
-      const f = S.verMap[k][0];           // 最新版本
-      const src = byKey('src:'+k);
-      let out = byKey('out:'+k);
-      if(!out){
-        out = { id:'u_'+Date.now().toString(36)+'_'+k, origin:'user', type:'asset', layer:'out',
-          title:k+' · 自动接线', src:f.rel, caption:f.rel, badge:'最新 · '+f.name, key:'out:'+k,
-          w:300, h:200, x:(src?src.x+560:2400), y:(src?src.y:140) };
-        cards.push(out); added++;
-      } else if(out.locked){
-        /* 用户指定过的版本：自动接线不覆盖 */
-      } else if(out.src !== f.rel){
-        out.src = f.rel; out.caption = f.rel; out.badge = '最新 · '+f.name; updated++;
-      } else {
-        out.badge = '最新 · '+f.name;
-      }
-      if(src){
-        const has = edges.some(e=>e.from===src.id && e.to===out.id);
-        if(!has){ edges.push({ id:'e_'+Date.now().toString(36)+'_'+k, from:src.id, to:out.id, kind:'flow', origin:'user' }); wired++; }
+    const existing = new Set(cards.map(c=>c.src).filter(Boolean));
+    let added=0, wired=0;
+    for(const d of AUTO_SCAN_DIRS){
+      const files = await scanDir(d);
+      for(const f of files){
+        if(!/\.(png|jpe?g|webp)$/i.test(f.name)) continue;
+        if(f.name.charAt(0)==='_' || f.rel.indexOf('/条带/')>=0) continue;
+        if(existing.has(f.rel)) continue;
+        if(cards.some(x=>x.title===f.name)) continue;
+        let layer='history';
+        if(/^KA_U\d{2}_(open|mid|end)\.png$/i.test(f.name)) layer='anchors';
+        const c = { id:'aw_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,6),
+          origin:'ai', type:'asset', layer:layer, title:f.name, badge:'自动接线',
+          src:f.rel, caption:f.rel, x:0, y:0, w:300, h:210 };
+        cards.push(c); existing.add(f.rel); added++;
+        const p = autoParentCard(f.name);
+        if(p && !edges.some(e=>e.from===p.id && e.to===c.id)){
+          edges.push({ id:'e_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,5),
+            from:p.id, to:c.id, kind:'flow', origin:'ai' });
+          wired++;
+        }
       }
     }
     (S.board.layers||[]).forEach(L=>{ L.count = cards.filter(c=>c.layer===L.key).length; });
-    render(); renderLayerBoxes(); buildWires(); refreshNodeVersions(); await saveBoard();
-    if(!silent || added || updated || wired) toast('自动接线完成：新增 '+added+' · 更新 '+updated+' · 新连线 '+wired);
+    if(added || wired){ await tidyBoard(); }
+    else { render(); renderLayerBoxes(); buildWires(); }
+    if(!silent) toast('自动接线完成：新增 '+added+' · 新连线 '+wired);
   } catch(e){ if(!silent) toast('自动接线失败：'+e.message); }
   finally { S.autoWireBusy = false; }
 }
-/* 一键整理：每层一列、卡片统一尺寸、垂直等距排列，自动适应窗口 */
+/* 一键整理（N×N 模块版）：每层内部按网格排，模块之间 shelf 换行，不再 1×N 长列 */
 async function tidyBoard(){
   try{
     const cards = S.board.cards||[];
     const layers = (S.board.layers||[]).map(L=>L.key);
-    const COLW = 470, GAPY = 26, TOP = 140;
-    const extraKey = '__extra';
+    const extraKey='__extra';
     const keys = layers.concat(cards.some(c=>!layers.includes(c.layer)) ? [extraKey] : []);
-    if(!keys.length) return;
-    // 列宽按该层最宽卡片决定
-    const colX = {}; let x = 0;
-    for(const k of keys){
-      const list = cards.filter(c=> k===extraKey ? !layers.includes(c.layer) : c.layer===k);
-      const width = list.length ? Math.max(...list.map(c=>sizeOf(c)[0])) : 300;
-      colX[k] = x;
-      x += width + 80;
-    }
+    const COLS = {overview:2, chars:2, props:2, crowd:2, scene:2, test:2, kf:3, anchors:5, history:5, nj_src:2, nj_char:3, nj_props:3, nj_shot:3, nj_keys:3, nj_video:3, video:1};
+    const CW=300, CH=210, GAP=18, HEADER=64, MGAP=70, MAXW=4600, X0=20, Y0=20;
+    const sizeOf2 = (c)=>{
+      if(c.type==='text'||c.type==='note') return [330,240];
+      if(c.type==='video') return [320,280];
+      if(c.layer==='src'||c.layer==='out') return [300,200];
+      return [CW,CH];
+    };
+    let cx=X0, cy=Y0, rowH=0, nmod=0;
     for(const k of keys){
       const list = cards.filter(c=> k===extraKey ? !layers.includes(c.layer) : c.layer===k)
         .sort((a,b)=> String(a.key||a.title||a.id).localeCompare(String(b.key||b.title||b.id),'zh'));
-      let y = TOP;
-      for(const c of list){
-        const [w,h] = sizeOf(c);
-        c.w=w; c.h=h; c.x=colX[k]; c.y=y; y += h + GAPY;
-      }
+      if(!list.length) continue;
+      const cols = COLS[k]||3;
+      const dims = list.map(sizeOf2);
+      const maxw = Math.max.apply(null, dims.map(d=>d[0]));
+      const maxh = Math.max.apply(null, dims.map(d=>d[1]));
+      const rows = Math.ceil(list.length/cols);
+      const bw = cols*(maxw+GAP)-GAP;
+      const bh = HEADER + rows*(maxh+GAP)-GAP;
+      if(cx+bw>MAXW && cx>X0){ cy += rowH+MGAP; cx=X0; rowH=0; }
+      list.forEach((c,i)=>{
+        const r=Math.floor(i/cols), col=i%cols;
+        const d=sizeOf2(c);
+        c.w=d[0]; c.h=d[1];
+        c.x=cx+col*(maxw+GAP)+(maxw-d[0])/2;
+        c.y=cy+HEADER+r*(maxh+GAP);
+        c.col=col;
+      });
+      nmod++;
+      cx += bw+MGAP;
+      rowH = Math.max(rowH,bh);
     }
     render(); renderLayerBoxes(); buildWires(); await saveBoard();
-    try{ fitView(); }catch(e){ /* ignore */ }
-    toast('已一键整理：'+cards.length+' 个节点 · '+keys.length+' 列');
+    try{ fitView(); }catch(e){}
+    toast('已一键整理：'+cards.length+' 个节点 · '+nmod+' 个模块（N×N）');
   } catch(e){ toast('整理失败：'+e.message); }
 }
 

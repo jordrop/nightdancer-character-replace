@@ -1,0 +1,18 @@
+{
+ "defaults": {"model_version": "5.0", "ratio": "16:9", "resolution_type": "2k", "generate_num": 1},
+ "jobs": [
+  {
+   "name": "示例_场景变体",
+   "mode": "image2image",
+   "refs": [
+    "参考上传/无归原_资产/S3_无归原沼泽_v1.png"
+   ],
+   "prompt": "冷灰褐低饱和电影感写实：无归原沼泽的另一个角度，枯草与黑泥水洼，低雾贴地；无人物无文字无logo"
+  },
+  {
+   "name": "示例_道具",
+   "mode": "text2image",
+   "prompt": "道具设定图：旧水壶，正面/侧面/细节三视图并排；深灰背景，单侧柔光；真实金属与磨损质感；无文字无logo；16:9"
+  }
+ ]
+}
